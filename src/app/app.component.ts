@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  displayItem = 'RECIPE';
+
+  changeDisplayList(displayItem: {action: string}) {
+    this.displayItem = displayItem.action;
+  }
 }
