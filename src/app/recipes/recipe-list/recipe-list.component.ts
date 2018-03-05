@@ -9,7 +9,7 @@ import {Recipe} from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('Test', 'Recipie description', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Schinken.jpg'),
-    new Recipe('Test', 'Recipie description', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Schinken.jpg')
+    new Recipe('tester', 'Recipie description', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Schinken.jpg')
   ];
   @Output('recipeEmitter') recipeEmitter = new EventEmitter<Recipe>();
   constructor() { }
