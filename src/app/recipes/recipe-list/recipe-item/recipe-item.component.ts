@@ -10,13 +10,12 @@ export class RecipeItemComponent implements OnInit {
 
  @Input('recipe')recipe: Recipe;
 
- @Output('recipeDetailsEmitter') recipeDetailsEmitter = new EventEmitter<Recipe>();
+ @Output('recipeDetailsEmitter') recipeDetailsEmitter = new EventEmitter<void>();
 
   constructor() { }
 
   emitRecipeClicked() {
-    console.log('emitting ' + this.recipe.name);
-    this.recipeDetailsEmitter.emit(this.recipe);
+    this.recipeDetailsEmitter.emit();
   }
 
   ngOnInit() {
