@@ -18,9 +18,9 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   addNewItem() {
-    const ingName = this.nameInputRef.nativeElement.value;
-    const ingAmount = this.amountInputRef.nativeElement.valueAsNumber;
-    if (ingName !== null && ingAmount !== null) {
+    const ingName: string = this.nameInputRef.nativeElement.value;
+    const ingAmount: number = this.amountInputRef.nativeElement.valueAsNumber;
+    if (ingName !== '' && !isNaN(ingAmount)) {
       this.itemEmitter.emit(new Ingredient(
         ingName, ingAmount));
     }
