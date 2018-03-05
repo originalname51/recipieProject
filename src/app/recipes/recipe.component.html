@@ -3,6 +3,11 @@
       <app-recipe-list (recipeEmitter)="passToRecipeDetail($event)"></app-recipe-list>
     </div>
     <div class="col-md-7">
-      <app-recipe-detail [recipeToShow]="recipe"></app-recipe-detail>
+      <app-recipe-detail *ngIf="recipe; else infoText"
+                         [recipeToShow]="recipe">
+      </app-recipe-detail>
+      <ng-template #infoText>
+        <p>Select a Recipe</p>
+      </ng-template>
     </div>
   </div>
