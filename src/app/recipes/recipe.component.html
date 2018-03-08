@@ -1,10 +1,10 @@
   <div class="row">
     <div class="col-md-5">
-      <app-recipe-list (recipeEmitter)="passToRecipeDetail($event)"></app-recipe-list>
+      <app-recipe-list></app-recipe-list>
     </div>
     <div class="col-md-7">
-      <app-recipe-detail *ngIf="recipe; else infoText"
-                         [recipeToShow]="recipe">
+      <app-recipe-detail *ngIf="recipes; else infoText"
+                         [recipeToShow]="recipes">
       </app-recipe-detail>
       <ng-template #infoText>
         <p>Select a Recipe</p>
