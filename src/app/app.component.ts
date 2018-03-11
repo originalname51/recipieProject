@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
   providers: []
 })
 export class AppComponent {
-  displayItem = 'RECIPE';
-
-  changeDisplayList(displayItem: {action: string}) {
-    this.displayItem = displayItem.action;
-  }
 }
