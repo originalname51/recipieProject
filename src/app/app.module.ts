@@ -14,9 +14,8 @@ import { DropdownDirectiveDirective } from './shared/dropdown-directive.directiv
 import {ShoppinglistService} from './shopping-list/shoppinglist.service';
 import {AppRoutingModule} from './app-routing-module';
 import { HomeComponent } from './home/home.component';
-import {RecipeResolver} from './recipes/recipe.resolver.service';
-import {RecipeService} from './recipes/recipe.service';
 import { DefaultRecipeComponent } from './recipes/default-recipe/default-recipe.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -32,12 +31,13 @@ import { DefaultRecipeComponent } from './recipes/default-recipe/default-recipe.
     DropdownDirectiveDirective,
     HomeComponent,
     DefaultRecipeComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ShoppinglistService, RecipeService, RecipeResolver],
+  providers: [ShoppinglistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
